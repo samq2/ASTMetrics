@@ -4,15 +4,15 @@
 function convertMultiple(textInput){
 
    // console.log(textInput);
-    let splitArray = textInput.replaceAll("\n", " ").split(" ");
-    let toDays = 0;
-    let toHours = 0;
-    let counter = 0;
-    let newArray =[];
+   let splitArray = textInput.replaceAll("\n", " ").split(" ");
+   splitArray = splitArray.filter(item => item);
+   let toDays = 0;
+   let toHours = 0;
+   let counter = 0;
+   let newArray =[];
 
-    console.log(splitArray.length);
-    console.log(splitArray);
-    
+   console.log(splitArray.length);
+   console.log(splitArray);
     
     
     while(counter < splitArray.length ){
@@ -22,7 +22,7 @@ function convertMultiple(textInput){
             toDays = Number(splitArray[0 + counter]);
             
             
-            if(splitArray[4+counter] >= 30){
+            if(splitArray[4 + counter] >= 30){
                 toHours = Number(splitArray[2 + counter]) + 1;
             }else{
                 toHours = Number(splitArray[2 + counter]);
@@ -101,6 +101,10 @@ function convertToText(array, pointer){
 
 //// Convert and Display ////
 document.querySelector("#convertButton").addEventListener("click", function(){
+
+    document.querySelector("#resultsSection").innerHTML = "";
+    document.querySelector("#resultsHoursSection").innerHTML = "";
+    
     let value = document.getElementById("textAreaBox").value;
 
     //console.log(value);

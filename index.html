@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Convert Business Hours</h1>
+    
+    <p>To use, input in the format of '1 Day 17 Hours 26 Second' or '20 Hours 13 Minutes 32 Seconds.' You are allowed to input multiple values such as: <br> 1 Day 17 Hours 30 Minutes 26 Seconds <br>
+    3 Days 9 Hours 39 Minutes 0 Seconds <br>
+    20 Hours 13 Minutes 32 Seconds</p>
+    <section class="form">
+        <div class="center">
+            <label for="initial">Numbers:</label> <br>
+            
+            <textarea name="" id="textAreaBox" cols="30" rows="10"></textarea> 
+            <button id="convertButton">Convert!</button>
+            <button id="clearButton"> Clear Results </button>
+            
+        </div>
+        
+    </section>
+    
+
+    <h2>Converted Text</h2>
+    <section id="resultsSection">
+
+    </section>
+
+
+    <h2>Converted Raw Hours</h2>
+    <section id="resultsHoursSection">
+
+    </section>
+     <script src="calculation.js"></script>
+</body>
+</html>
